@@ -1,129 +1,107 @@
-html {
+/* Formatting template for all pages */
+
+/* Template */
+.container {
+  display: grid;
+  grid-template-areas: 
+    "header header"
+    "nav body"
+    "footer footer";
+  grid-template-columns: 15% 90%;
+  background-color: #fff;
+  padding: 10px;
+}
+
+/*  */
+.container > div {
+  padding: 10px;
+}
+
+/* Template for header on all pages */
+.container > div.header {
+  grid-area: header;
+  text-align: center;
+  font-family:'Inter', sans-serif;
+  background-color:darkblue;
+  width: 100%;   
+  height: 12vh;
+  text-shadow: -2px 7px 5px rgba(164,145,80,0.69);
+}
+
+/* Template for Navigation bar */
+.container > div.nav {
+  grid-area: nav;
   background-color: black;
 }
 
-body {
+/* Template for body section */
+.container > div.body {
+  grid-area: body;
+  grid-template-areas: 
+  "c1r1 c2r1"
+  "c1r2 c2r2";
+  grid-template-columns: 100% 100%;
+}
+
+/* Template for footer section */
+.container > div.footer {
+  grid-area: footer;
+
+}
+
+/* Header Title of each page */
+header .header_title {
+    padding-top: 50px;
+    font-size: 50px;
+  }
+
+/* Navigation bar setup */
+  .nav {
+    max-width: fit-content;
+    min-height: 100vh;
+    background-color: black;
+    padding-left: 10px;
+    font-size: large;
+  }
+
+/* Navigation bar text setup */
+  .nav a {
+    display: inline-flex;
+    padding: 0.5rem 0;
+    text-align: left;
+  }
+  
+/* Body text setup */
+  body {
+    font-family: Roboto, sans-serif;
+    color:lightgoldenrodyellow;
     background-size: cover;
     background-image: url('space-background.jpg');
-    font-family: Roboto, sans-serif;
-  
+    line-height: 1.25;
   }
 
-  header {
-    padding: 20px 0;
-  }
-  
-  header .row,
-  footer .row {
-    display: flex;
-    align-items: center;
-
-  }
-  
-  h1 {
-    font-weight: 700;
-    margin: 0;
-  }
-  
-  nav {
-    display: flex;
-    justify-content: flex-end;
-    word-spacing: 30em;
-  }
-  
-  a {
-    padding: 0 20px;
-    margin: 0;
+  .col {
+    width: 300px;
   }
 
   .headshot {
-    grid-column: span 1/-1;
-  }
-  
-  .jumbotron {
-    display: flex;
-    align-items: center;
-    background-image: url('https://content.codecademy.com/projects/personal_portfolio/background.jpeg');
-    background-size: cover;
-    color: #ffffff;
-    height: 400px;
-  }
-  
-  .jumbotron h2 {
-    font-size: 60px;
-    font-weight: 700;
-    margin: 0;
-    color: #fff;
-  }
-  
-  .jumbotron h3 {
-    margin: 0 0 20px;
-    color: #fff;
-  }
-  
-  section .row img {
-    margin: 0 0 30px;
+    height: 100%;
     width: 100%;
   }
 
-  .col-sm-6 {
-    display: inline;
+ div.body.c1r1 {
+    padding: 10px;
+    background-color: #fff;
+    grid-area: c1r1;
   }
-  
-  .col-md-6 {
-    margin: 0 0 30px;
+
+  div.body.c1r2 {
+    padding-left: 50%;
+    background-color: aqua;
+    grid-area: c2r1;
   }
+
+
+
   
-  .btn.btn-primary {
-    border-radius: 2px;
-    border: 0px;
-    color: #fbd1d5;
-    background-color: #ffffff;
-  }
-  
-  .btn.btn-primary:hover {
-    color: #ffffff;
-    background-color: #fbd1d5;
-  }
-  
-  .btn-secondary {
-    background-color: #2a70e0;
-    color: #ffffff;
-    margin: 0 0 30px;
-  }
-  
-  .portrait-2 {
-    width:  500px;
-    height: 250px;
-    display: inline;
-  }
-  
-  .portrait-1 {
-     width: 500px;
-    height: 300px;
-  }
-  
-  figure img {
-    width: 100%;
-    height: auto;
-  }
-  
-  figure {
-    margin-bottom: 30px;
-  }
-  
-  footer {
-    font-size: 12px;
-    padding: 20px 0;
-  }
-  
-  footer .col-sm-8 {
-    display: flex;
-    justify-content: flex-end;
-    
-  }
-  
-  footer ul {
-    list-style: none;
-  }
-  
+
